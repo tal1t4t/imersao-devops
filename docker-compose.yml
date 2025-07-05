@@ -1,0 +1,10 @@
+services:
+  api:
+    build: . #constrói a imagem com base no Dockerfile na raiz do projeto
+    container_name: api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app # monta o diretório atual dentro do contêiner
+    
+# agora só precisa escrever "docker compose up" pra rodar o site
